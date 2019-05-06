@@ -1,0 +1,26 @@
+.demo-card-square{
+    position: relative;
+}
+
+.demo-card-square > .mdl-card__title {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    margin: auto;
+}
+
+.demo-card-square.mdl-card {
+    width: 30%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.mdl-textfield{
+    margin-left: 10%;
+    width: 80%;
+}
+

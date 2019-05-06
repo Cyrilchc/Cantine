@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" onload="CheckAuth()">
+<head>
+    <meta charset="UTF-8">
+    <title>Cantine</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="DashBoardStyle.css" rel="stylesheet">
+</head>
+<!--<body onload="getOutStockProducts(); CheckAuth()">-->
+<body onload="getProducts(); checkAuth()">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Cantine</span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                       for="searcher">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample"
+                           id="searcher" onkeyup="filterProducts()">
+                </div>
+                <label>
+                <div id="tt1" class="icon material-icons" onmouseenter="getValorisation()">attach_money</div>
+                <div class="mdl-tooltip" data-mdl-for="tt1" id="valorisation">
+                Follow
+                </div>
+                </label>
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Cantine</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Tableau de bord</a>
+            <a class="mdl-navigation__link" href="../CreateProduct/CreateProduct.html">Ajouter un produit</a>
+            <a class="mdl-navigation__link" href="../OutStock/OutStock.html">Stock</a>
+            <a class="mdl-navigation__link" href="../OutDate/OutDate.html">Péremption</a>
+            <a class="mdl-navigation__link" href="../Auth/Connexion.html">Connexion</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content" id="root">
+            <!-- Your content goes here -->
+
+
+        </div>
+    </main>
+</div>
+
+<script type="text/javascript" src="../Scripts.js"></script>
+<script type="text/javascript" src="DashBoardScript.js"></script>
+</body>
+</html>

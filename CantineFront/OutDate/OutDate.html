@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="OutDatestyle.css" rel="stylesheet">
+</head>
+<!--<body onload="getOutStockProducts(); CheckAuth()">-->
+<body onload="checkAuth()">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Péremption</span>
+            <div class="mdl-layout-spacer"></div>
+            <span>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="perime">
+                <p>Périmés</p>
+                <input type="checkbox" id="perime" class="mdl-switch__input" onclick="switchtoggled()">
+                <span class="mdl-switch__label"></span>
+                </label>
+            </span>
+            <div class="mdl-layout-spacer"></div>
+            <span>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="limitperime">
+                <p>Trier entre aujourd'hui et la date choisie</p>
+                <input type="checkbox" id="limitperime" class="mdl-switch__input" onclick="switchtoggled()">
+                <span class="mdl-switch__label"></span>
+                </label>
+            </span>
+            <div class="mdl-layout-spacer"></div>
+            <span>
+                <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="date" id="dateperemption" onchange="filtrerDate()">
+                </div>
+            </span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                       for="searcher">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample"
+                           id="searcher" onkeyup="filterProducts()">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Cantine</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="../DashBoard/DashBoard.html">Tableau de bord</a>
+            <a class="mdl-navigation__link" href="../CreateProduct/CreateProduct.html">Ajouter un produit</a>
+            <a class="mdl-navigation__link" href="../OutStock/OutStock.html">Stock</a>
+            <a class="mdl-navigation__link" href="">Péremption</a>
+            <a class="mdl-navigation__link" href="../Auth/Connexion.html">Connexion</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content" id="root">
+            <!-- Your content goes here -->
+
+
+        </div>
+    </main>
+</div>
+
+<script type="text/javascript" src="OutDateScript.js"></script>
+</body>
+</html>
