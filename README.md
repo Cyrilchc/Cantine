@@ -67,6 +67,7 @@ Si le projet est lancé en local, il faut ajouter un filtre à la configuration 
   * Placez le répertoire CantineFront dans le répertoire `www` de votre serveur local.
   * Lancez votre serveur local
   * Depuis votre navigateur, accédez à l'adresse `http://localhost/ProjetJavaEEFrontBS/Auth/Connexion`
+  * Vous pouvez vous connecter avec le duo admin, admin
   
 
 ### Fonctions
